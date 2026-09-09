@@ -49,7 +49,10 @@ pip install grpcio grpcio-tools
 
 1- Acesse a pasta adocao-grpc e abra o ambiente virtual com:  
 cd ~/adocao-grpc  
-source venv/bin/activate
+source venv/bin/activate  
+
+1.1- Compilar .proto:  
+python -m grpc_tools.protoc -I proto --python_out=. --grpc_python_out=. proto/adocao.proto  
 
 2- Inicie os servidores/cliente:  
 para rodar servidor doação  
