@@ -23,3 +23,40 @@ python -m adocao.servidor
 
 para rodar cliente:  
 python -m adocao.cliente  
+
+Em Linux (VM Google Cloud):
+
+**CONFIGURAÇÃO INICIAL**  
+
+0.1- Instale o pip (execute os dois abaixo):  
+sudo apt update  
+sudo apt install python3-pip  
+
+0.2- Instale o ambiente virtual do python (venv):  
+sudo apt install python3-full  
+
+0.3- Git clone este repositório e em seguida acesse a pasta SD2026 -> adocao-grpc:  
+git clone https://github.com/Rodrigo-Yuji/SD2026.gls  
+
+0.4- Crie o ambiente virtual e acesse-o:  
+python3 -m venv venv  
+source venv/bin/activate  
+
+0.5- Instale o GRPC:
+pip install grpcio grpcio-tools
+
+**INICIALIZAÇÃO DO SISTEMA (EXECUTAR SEMPRE QUE FECHAR A MÁQUINA OU EM NOVA INSTÂNCIA)**  
+
+1- Acesse a pasta adocao-grpc e abra o ambiente virtual com:  
+cd ~/adocao-grpc
+source venv/bin/activate
+
+2- Inicie os servidores/cliente:  
+para rodar servidor doação  
+python -m animais.servidor  
+
+para rodar servidor animais  
+python -m adocao.servidor  
+
+para rodar cliente:  
+python -m adocao.cliente  
