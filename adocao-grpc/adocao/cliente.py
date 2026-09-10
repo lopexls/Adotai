@@ -6,8 +6,7 @@ import adocao_pb2_grpc
 
 def main():
 
-    with grpc.insecure_channel("localhost:9091") as canal:
-
+with grpc.insecure_channel("10.128.0.2:9091") as canal:
         stub = adocao_pb2_grpc.AdocaoServiceStub(canal)
 
         nome = input("Digite seu nome: ")
