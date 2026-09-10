@@ -5,12 +5,11 @@ import adocao_pb2_grpc
 
 
 def main():
-
-with grpc.insecure_channel("10.128.0.2:9091") as canal:
+    # Conecta no Microsserviço de Adoção rodando na VM Server na porta 9091
+    with grpc.insecure_channel("10.128.0.2:9091") as canal:
         stub = adocao_pb2_grpc.AdocaoServiceStub(canal)
 
         nome = input("Digite seu nome: ")
-
         animal_id = int(
             input("Digite o ID do animal que deseja adotar: ")
         )
